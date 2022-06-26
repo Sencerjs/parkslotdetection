@@ -9,7 +9,7 @@ try:
 except:
     posList = []
 
-## rectangle
+## rectangle size
 width = 105
 height = 50
 
@@ -29,8 +29,8 @@ def onClick(events, x, y ,flags, params):
 while True:
     img = cv2.imread('parkslotimage.png')
     for pos in posList:
-        cv2.rectangle(img, pos,(pos[0] + width, pos[1] + height),(255,0,0),3)
+        cv2.rectangle(img, pos,(pos[0] + width, pos[1] + height),(0,0,128),2)
 
     cv2.imshow("image",img)
     cv2.setMouseCallback("image",onClick)
-    cv2.waitKey(1)
+    cv2.waitKey(5)
